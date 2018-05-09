@@ -1,0 +1,61 @@
+<section class="registration js-reg">
+	<div class="registration-inner">
+		<form class="registration-form">
+			<h1 class="registration-title">Регистрация</h1>
+			<div class="registration-row">
+				<div class="registration-col">
+					<label class="registration-label" for="regName">Имя</label>
+					<input type="text" class="registration-input" id="regName">
+				</div>
+				<div class="registration-col">
+					<label class="registration-label" for="regSurname">Фамилия</label>
+					<input type="text" class="registration-input" id="regSurname">
+				</div>				
+			</div>
+			<div class="registration-row">
+				<div class="registration-col">
+					<label class="registration-label" for="regPhone">Сотовый телефон</label>
+					<input type="text" class="registration-input" id="regPhone" placeholder="+7|">	
+					<span class="registration-desc">номер сотового телефона должен быть действительным до конца июля 2018 г</span>
+				</div>
+				<div class="registration-col">
+					<label class="registration-label" for="regEmail">E-mail</label>
+					<input type="text" class="registration-input __email" id="regEmail" placeholder="Для вступления в клуб заполните поле">						
+				</div>				
+			</div>	
+			<div class="registration-row">
+				<div class="registration-col">
+					<label class="registration-label">Область</label>
+					<select class="registration-select">
+					  <option data-display="Алматинская">Алматинская</option>
+					  <option value="1">Алматинская</option>
+					  <option value="2">Алматинская</option>
+					</select>
+				</div>
+				<div class="registration-col">
+					<label class="registration-label">Город</label>
+					<select class="registration-select">
+					  <option data-display="Алматы">Алматы</option>
+					  <option value="1">Алматы</option>
+					  <option value="2">Алматы</option>
+					</select>
+				</div>				
+			</div>
+			<div class="registration-row">
+				<div class="registration-col">
+					<label class="registration-label" for="regPass">Пароль</label>
+					<input type="password" class="registration-input" id="regPass">	
+				</div>
+				<div class="registration-col __check">
+					<label class="registration-checkbox__label">
+				  <input type="checkbox" checked="checked" class="registration-checkbox">
+				  <span class="registration-checkbox__mark"></span>
+				  Я согласен с условиями промо  и даю согласие на сбор данных* 
+				</label>							
+				</div>				
+			</div>
+			<button class="registration-btn">Вступить в клуб</button>			
+			<button class="ico icons-close registration-close js-reg-close"></button>					
+		</form>
+	</div>
+</section>

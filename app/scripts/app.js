@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  $('select').niceSelect();
+
   $('.stepts-bottles').slick({
     infinite: true,
     slidesToShow: 3,
@@ -6,6 +8,7 @@ $(document).ready(function() {
     nextArrow:'.stepts-bottles-next',
     prevArrow:'.stepts-bottles-prev'
   });
+  
   $('.stepts-prize').slick({
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -17,12 +20,14 @@ $(document).ready(function() {
 
   $('#loginPhone').mask('+7 (000) 000-000-0');
 
+  $('#regPhone').mask('+7 (000) 000-000-0');
+
   $('#loginDropdown').click(function() {
     $('#dropdown').toggleClass('__active');
   });
 
-  $('.js-modal-container').addClass('_active')
-  $(document.body).addClass('_active');
+  // $('.js-modal-container').addClass('_active')
+  // $(document.body).addClass('_active');
   $('.js-ok').click(function($event) {
     $event.preventDefault();
    $('.js-modal-container').fadeOut(300);
@@ -40,6 +45,17 @@ $(document).ready(function() {
   $('.js-error-ok').click(function($event) {
     $event.preventDefault();
     $('.modal-error').fadeOut(300);
+  });
+
+  $('.js-reg-btn').click(function($event) {
+    $event.preventDefault();
+    $('.js-reg').fadeIn(300);
+    $('#dropdown').removeClass('__active');
+  });
+
+  $('.js-reg-close').click(function($event) {
+    $event.preventDefault();
+    $('.js-reg').fadeOut(300);
   });
 
   $('.js-burger').click(function() {

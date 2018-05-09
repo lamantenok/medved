@@ -27,3 +27,11 @@
   @include icon('../images/icons/qiwi.png',87px,39px);
 }
 
+.icons-close{
+	@include icon('../images/icons/close.png',14px,12px);	
+}
+
+.icons-paw-green{
+	@include icon('../images/icons/pawgreen.png',87px,105px);	
+}
+

@@ -18,6 +18,8 @@ $mq-breakpoints: (
 @import 'objects.global';
 @import 'objects.icons';
 
+@import 'vendors.nice-select';
+
 @import 'components.header';
 @import 'components.footer';
 @import 'components.mobilemenu';
@@ -27,3 +29,5 @@ $mq-breakpoints: (
 @import 'components.prizes';
 @import 'components.winners';
 @import 'components.modal';
+@import 'components.registration';
+@import 'components.cabinet';
