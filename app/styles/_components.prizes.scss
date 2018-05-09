@@ -1,0 +1,46 @@
+.prizes-row{
+	margin-bottom: 4rem;
+	display: flex;
+}
+
+.prizes-col{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.prizes-title{
+	margin-bottom: 2.5rem;
+	text-transform: uppercase;
+	font-size:2.9rem;
+	color:$b-red;
+}
+
+.prizes-img{
+	height: 21rem;
+}
+
+.prizes-img__item{
+	max-height: 100%;
+}
+
+.prizes-desc{
+	display: block;
+	text-transform: uppercase;
+	font-size:2.25rem;
+	color:$b-red;	
+	text-align: center;
+	line-height: 1.2;
+}
+
+.prizes-desc-small{
+	margin-top: 1rem;
+	display: block;
+	text-transform: uppercase;
+	font-size:1rem;
+	color:$b-green;	
+	text-align: center;
+	line-height: 1.2;	
+	max-width: 70%;
+}

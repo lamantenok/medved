@@ -1,0 +1,59 @@
+@mixin clearfix {
+  *zoom: 1;
+
+  &:after,
+  &:before {
+    display: table;
+    content: " ";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+@mixin icon($url,$sizew,$sizeh) {
+  width: $sizew;
+  height: $sizeh;
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
+}
+
+/*@media screen and (max-width: 1920px) {
+  body {
+    font-size: 18px !important;
+  }
+}
+@media screen and (max-width: 1440px) {
+  body {
+    font-size: 15px !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 12px !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 12px !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 12px !important;
+  }
+}*/
+
+
+@mixin background-image-retina($file, $type, $width, $height) {
+  background-image: url($file + '.' + $type);
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+    & {
+      background-image: url($file + '@2x.' + $type);
+      background-size: $width $height;
+    }
+  }
+}

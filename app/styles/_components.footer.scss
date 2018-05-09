@@ -1,0 +1,105 @@
+footer{
+	padding: 2.5rem 0 3rem;
+	background: radial-gradient(ellipse at center, rgba(10,118,32,1) 0%,rgba(10,118,32,1) 30%,rgba(10,118,32,1) 30%,rgba(4,46,8,1) 100%); 
+	.container{
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.footer-col{
+	width: 35%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.footer-phone{
+	margin-bottom: 1.8rem;
+	display: inline-block;
+	font-size: 1.8rem;
+	color:$b-white;
+}
+
+.footer-desc{
+	margin-bottom: 1.8rem;
+	display: block;
+	font-size: 1.2rem;
+	color:$b-white;	
+	text-transform: uppercase;
+}
+
+.footer-social{
+	margin-bottom: 1.5rem;
+	display: flex;
+}
+
+.footer-social__item{
+	margin-right: 1.8rem;
+	cursor: pointer;
+	&.icons-fb{
+		@include icon('../images/icons/fb.png',55px,55px);
+	}
+	&.icons-in{
+		@include icon('../images/icons/in.png',55px,55px);
+	}
+}
+
+.footer-feedback{
+	padding: 0.8rem 0;
+	width: 16rem;
+	background: transparent;
+	border:1px solid $b-white;
+	border-radius: 10px;
+	font-size: 1.3rem;
+	color:$b-white;	
+	text-transform: uppercase;
+	font-family: $ff-bebas;
+	cursor: pointer;
+	&:hover{
+		text-decoration:underline;
+	}
+}
+
+.footer-logo{
+	margin:0 auto;
+	display: block;
+	max-width: 17.5rem;
+}
+
+.footer-lang{
+	margin-bottom: 3.5rem;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.footer-lang__item{
+	margin-right: 0.6rem;
+	font-size: 1.1rem;
+	color: $b-white;
+	text-transform: uppercase;
+	&:last-of-type{
+		margin-right:0;
+	}
+}
+
+.footer-nav{
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+}
+
+.footer-nav-item{
+	margin-bottom: 1.2rem;
+	display: block;
+}
+
+.footer-nav-link{
+	color:$b-white;
+	font-size: 1.4rem;
+	text-decoration:none;
+	font-family: $ff-bebas-book;
+	&:hover{
+		text-decoration:underline;
+	}
+}

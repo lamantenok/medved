@@ -1,0 +1,29 @@
+.ico {
+  display: inline-block;
+  background: center center no-repeat;
+}
+
+.icon-paw {
+  @include icon('../images/icons/pawsmall.png',38px,47px);
+}
+
+.icon-bucket {
+  @include icon('../images/icons/bucket.png',36px,59px);
+}
+
+.icon-bucket-red {
+  @include icon('../images/icons/bucketred.png',36px,59px);
+}
+
+.icon-cup {
+  @include icon('../images/icons/cap.png',58px,58px);
+}
+
+.icon-cup-red {
+  @include icon('../images/icons/capred.png',58px,58px);
+}
+
+.icon-qiwi{
+  @include icon('../images/icons/qiwi.png',87px,39px);
+}
+

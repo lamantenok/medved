@@ -1,0 +1,125 @@
+.dropdown{
+	margin-top: 1rem;
+	padding:1.2rem 0.9rem;
+	top:100%;
+	right:1.8rem;
+	position: absolute;
+	background: $b-white;
+	min-width: 27rem;
+	display: none;
+
+	&:before{
+		content:'';
+		top:-11px;
+		right:3rem;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 11px 12px 11px;
+		border-color: transparent transparent #ffffff transparent;		
+	}
+	&.__active{
+		display: block;
+	}
+}
+
+.login-row {
+	margin-bottom: 1.8rem;
+}
+
+.login-label{
+	margin-bottom: 1.2rem;
+	display: block;
+	text-transform: uppercase;
+	font-family: $ff-bebas-b;
+	font-size:1rem;
+	color:$b-green;
+}
+
+.login-phone{
+	padding: 0.5rem;
+	width: 100%;
+	border:0;
+	border-bottom: 1px solid #b0b0b0;
+	font-family: $ff-bebas;
+	color:black;
+	font-size:1.1rem;
+	&::placeholder{
+		color:black;
+		font-size:1.1rem;
+		font-family: $ff-bebas;
+	}
+}
+
+.login-pass-container{
+	position: relative;
+}
+
+.login-pass{
+	padding: 0.5rem;
+	width: 100%;
+	border:0;
+	border-bottom: 1px solid #b0b0b0;
+	color:black;
+	font-size:1.1rem;
+  &.__invalid{
+    & ~ .login-pass__text {
+     display: block;
+    }
+  }   
+}
+
+.login-pass__text {
+	top:0;
+	left:0;
+	position: absolute;
+  padding: 0.5rem;
+  color: $b-red;
+  display: none;
+  overflow: hidden;
+  color: red;
+  font-size:0.8rem;
+}
+
+.login-pass__text-link{
+	color: red;
+  font-size:0.8rem;
+  text-decoration: underline;
+}
+
+.login-control-row{
+	margin-bottom: 1rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.login-reg{
+	padding: 0.75rem 2rem;
+	color:$b-white;
+	font-size:1.1rem;
+	border-radius: 5px;
+	text-transform: uppercase;
+  background-image:linear-gradient( 90deg, rgb(18,79,3) 0%, rgb(23,105,3) 100%);
+  box-shadow: 0px 3px 29px 0px rgba(0, 0, 0, 0.27);
+}
+
+.login-btn{
+	padding: 0.75rem 2rem;
+	color:$b-white;
+	font-size:1.1rem;
+	border-radius: 10px;
+	text-transform: uppercase;
+  border-radius: 5px;
+  background-image: linear-gradient( 90deg, rgb(146,11,18) 0%, rgb(214,15,25) 100%);
+  box-shadow: 0px 3px 29px 0px rgba(0, 0, 0, 0.27);
+}
+
+.login-link{
+	margin-right: 0.75rem;
+	display: block;
+	text-transform: uppercase;
+	font-size:0.8rem;
+	color:$b-green;
+	text-align: right;
+}

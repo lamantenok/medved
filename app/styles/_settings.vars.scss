@@ -1,0 +1,26 @@
+$mq-breakpoints: (
+  mobile: 320px,
+  tablet: 740px,
+  desktop: 1025px,
+  wide: 1380px,
+  desktopAd: 810px
+) !default;
+$max-width: 1200px;
+$max-width-ad: 1280px;
+$max-width-tablet: 960px;
+
+$b-hover: #871728;
+$b-white: #ffffff;
+$b-black: #000000;
+$b-red: #d00f18;
+$b-green:#124f03;
+
+
+$ff-bebas: 'BebasNeueRegular' ,Arial, Helvetica, sans-serif;
+$ff-bebas-t: 'BebasNeue-Thin',Arial, Helvetica, sans-serif;
+$ff-bebas-b: 'BebasNeueBold',Arial, Helvetica, sans-serif;
+$ff-bebas-book: 'BebasNeueBook',Arial, Helvetica, sans-serif;
+$ff-bebas-l: 'BebasNeueLight',Arial, Helvetica, sans-serif;
+
+
+

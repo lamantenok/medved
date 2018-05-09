@@ -1,0 +1,12 @@
+{
+  "name": "package",
+  "version": "0.0.0",
+  "dependencies": {
+    "sass-mq": "~3.2.4",
+    "jquery": "~2.1.4",
+    "slick-carousel": "^1.8.1",
+    "css-hamburgers": "^0.9.3",
+    "magnific-popup": "^1.1.0",
+    "jquery-mask-plugin": "^1.14.15"
+  }
+}

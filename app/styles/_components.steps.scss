@@ -1,0 +1,220 @@
+.stepts{
+	padding:2rem 0 1.2rem;
+	.container{
+		display: flex;
+	}
+}
+
+.stepts-col{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	&.__vertical{
+		justify-content: flex-start;
+		align-items: center;
+	}
+}
+
+.stepts-bottles-container{
+	margin-bottom: 3rem;
+	position: relative;
+}
+
+.stepts-bottles__item{
+	cursor: pointer;
+	&:hover{
+		.stepts-bottles__price{
+			opacity:1;
+		}
+	}
+}
+
+.stepts-bottles__img{
+	max-width: 6.3rem;
+	max-height: 100%;
+}
+
+.stepts-bottles__img-container{
+	text-align: center;
+	height: 18.5rem;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.stepts-bottles__price{
+	margin-bottom: 1rem;
+	transition: all 0.3s ease;
+	opacity: 0;
+	display: flex;
+	justify-content: center;
+	.ico{
+		margin-right: 1rem;
+		&:last-of-type{
+			margin-right:0;
+		}
+	}
+}
+
+.stepts-bottles-prev{
+	bottom:6rem;
+	left:-3rem;
+	position: absolute;
+	background: transparent;
+	border: 0;
+	@include icon('../images/arrowleft.png',29px,51px);
+	cursor: pointer;
+	&:focus{
+		outline:none;
+	}
+}
+
+.stepts-bottles-next{	
+	bottom:6rem;
+	right:-3rem;
+	position: absolute;
+	background: transparent;
+	border: 0;
+	@include icon('../images/arrowright.png',29px,51px);
+	cursor: pointer;
+	&:focus{
+		outline:none;
+	}
+}
+
+.steps-rules{
+	padding: 1.8rem 0;
+	position: relative;
+	background: url('../images/steps.png') 106% bottom;
+	background-repeat: no-repeat;
+	&:after{
+		content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right:0;
+    width: 3000px;
+    height: 100%;
+		background: linear-gradient(to bottom, rgba(211,15,25,1) 0%,rgba(150,12,18,1) 100%);
+	}
+}
+
+.steps-rules__title{
+	margin-bottom: 1rem;
+	color:white;
+	font-size:2.8rem;
+	font-family: $ff-bebas-b;
+}
+
+.steps-rules-list__item{
+	margin-bottom: 2.5rem;
+	padding-left: 6rem;
+	position: relative;
+	font-size:2.3rem;
+	color:white;
+	line-height: 1.2em;
+	&:before{
+		content:'';
+		position: absolute;
+		bottom:0;
+		left:1.8rem;
+		@include icon('../images/icons/pawsmall.png',38px,47px);
+	}
+	.icon-cup{
+		margin-bottom: -0.5rem;
+		margin-right: 1.2rem;
+		margin-left: 0.6rem;
+	}
+	.icon-bucket{
+		margin-bottom: -0.5rem;
+	}
+
+	.icon-qiwi{
+		margin-left: 1.8rem;
+		margin-bottom: -0.5rem;
+	}
+
+	&:last-of-type{
+		margin-bottom: 0;
+		&:before{
+			top:0;
+			bottom:auto;
+		}
+	}
+}
+
+.steps-rules-link{
+	font-size:2.3rem;
+	color:white;
+	text-decoration: underline;
+}
+
+.stepts-info{
+	padding-top: 1.2rem;
+	display: block;
+	color:$b-red;
+	font-size: 1.1rem;
+	text-align: center;
+}
+
+.stepts-prize-container{
+	padding: 3rem 0;
+	max-width: 24rem;
+	position: relative;
+}
+
+.stepts-prize-title{
+	margin-bottom: 1.8rem;
+	font-size:2.25rem;
+	font-family: $ff-bebas-b;
+	color:$b-red;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.stepts-prize-item{
+	margin-bottom: 1.8rem;
+}
+
+.stepts-prize__img{
+	margin:0 auto 1.2rem;
+	height: 15.6rem;
+}
+
+.stepts-prize__text{
+	display: block;
+	font-size:2.25rem;
+	font-family: $ff-bebas-b;
+	color:$b-red;
+	text-transform: uppercase;
+	text-align: center;	
+}
+
+.stepts-bottles-top{
+	top:0;
+	left:50%;
+	transform: translate(-50%,0);
+	position: absolute;
+	background: transparent;
+	border: 0;
+	@include icon('../images/arrowtop.png',51px,29px);
+	cursor: pointer;
+	&:focus{
+		outline:none;
+	}
+}
+
+.stepts-bottles-bottom{
+	bottom:0;
+	left:50%;
+	transform: translate(-50%,0);
+	position: absolute;
+	background: transparent;
+	border: 0;
+	@include icon('../images/arrowbottom.png',51px,29px);
+	cursor: pointer;
+	&:focus{
+		outline:none;
+	}	
+}

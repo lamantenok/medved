@@ -1,0 +1,90 @@
+.winners{
+	padding-bottom: 5rem;
+	background: radial-gradient(ellipse at center, rgba(10,118,32,1) 0%,rgba(10,118,32,1) 30%,rgba(10,118,32,1) 30%,rgba(4,46,8,1) 100%); 
+}
+
+.winners-title{
+	margin:3rem auto 2.5rem;
+	overflow: hidden;
+  font-size:2.25rem;
+  color: $b-white;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  font-family: $ff-bebas-b;
+  span{
+  	position: relative;
+    display: inline-block;
+	  &:before{
+	    content: '';
+	    right: 100%;
+	    margin-right: 3rem;
+	    position: absolute;
+	    z-index: 1;
+	    top: 50%;
+	    width: 3000px;
+	    height: 3px;
+	    background-color:  $b-white;
+	  }
+	  &:after{
+	    content: '';
+	    left: 100%;
+	    margin-left: 3rem;
+	    position: absolute;
+	    z-index: 1;
+	    top: 50%;
+	    width: 3000px;
+	    height: 3px;
+	    background-color:  $b-white;
+	  }  	
+  }
+}
+
+.winners-row{
+	margin-bottom: 1.8rem;
+	border-bottom: 3px solid $b-white;
+	padding: 0 3rem 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	&:last-of-type{
+		margin-bottom:0;
+	}
+}
+
+.winners-col{
+	width: 33.3%;
+	&:nth-of-type(2){
+		text-align: center;
+	}
+	&:nth-of-type(3){
+		text-align: right;
+	}
+}
+
+.winners-name{
+	color:white;
+	font-family: $ff-bebas-book;
+	font-size:2.25rem;
+	span{
+		font-size:1.5rem;
+	}
+}
+
+.winners-paws{
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	color:white;
+	font-family: $ff-bebas-book;
+	font-size:2.25rem;
+	.ico{
+		margin-right: 0.6rem;
+	}	
+}
+
+.winners-prize{
+	color:white;
+	font-family: $ff-bebas-book;
+	font-size:2.25rem;	
+}

@@ -1,0 +1,29 @@
+@import '../../bower/sass-mq/mq';
+$mq-breakpoints: (
+    mobile: 420px,
+    tablet: 800px,
+    desktop: 1030px,
+    wide: 1380px,
+    desktopAd: 810px
+  );
+@import 'settings.vars';
+@import 'settings.fonts';
+@import '../../bower/slick-carousel/slick/slick.scss';
+@import '../../bower/slick-carousel/slick/slick-theme.scss';
+@import '../../bower/css-hamburgers/_sass/hamburgers/hamburgers';
+@import '../../bower/magnific-popup/dist/magnific-popup';
+@import 'tools.helpers';
+@import 'generic.reset';
+
+@import 'objects.global';
+@import 'objects.icons';
+
+@import 'components.header';
+@import 'components.footer';
+@import 'components.mobilemenu';
+@import 'components.preview';
+@import 'components.steps';
+@import 'components.dropdown';
+@import 'components.prizes';
+@import 'components.winners';
+@import 'components.modal';

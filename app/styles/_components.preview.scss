@@ -1,0 +1,82 @@
+.preview{
+	padding-bottom: 3rem;
+	background: url('../images/mainbg.jpg') no-repeat center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	overflow: auto;
+}
+
+.preview-row {
+	display: flex;
+	align-items: center;
+	background: url('../images/bear.png') no-repeat top right;
+	background-size: contain;
+}
+
+.preview-left{
+	width: 35%;
+}
+
+.preview-right{}
+
+.preview-image{
+	margin-left: -20%;
+	max-width: 34rem;
+}
+
+.preview-title{
+	color:white;
+	font-size:5.8rem;
+	font-family: $ff-bebas-b;
+}
+
+.preview-alert{
+	margin-bottom: 7.5rem;
+	padding: 0.8rem 1.1rem;
+	font-size: 2.3rem;
+	color:$b-white;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, rgba(211,15,25,1) 0%,rgba(150,12,18,1) 100%);
+  box-shadow: 0px 3px 29px 0px rgba(0, 0, 0, 0.27);
+  display: inline-block;
+}
+
+.preview-reg{
+	position: relative;
+	display: inline-block;
+}
+
+.preview-reg__img{
+	top:-3rem;
+	left:105%;
+	position: absolute;
+}
+
+.preview-reg__link{
+	margin-bottom: 1rem;
+	display: block;
+	font-size: 2.5rem;
+	color:$b-white;
+	a{
+		color:$b-white;
+		text-decoration: underline;
+	}
+}
+
+.preview-reg__sms{
+	padding: 0.8rem 0.5rem;
+	font-size: 1.3rem;
+	color:$b-white;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, rgba(211,15,25,1) 0%,rgba(150,12,18,1) 100%);
+  box-shadow: 0px 3px 29px 0px rgba(0, 0, 0, 0.27);
+  display: inline-block;
+  a{
+  	font-size: 2rem;
+  	color:$b-white;
+  	text-decoration: none;
+  	vertical-align: middle;
+  	display: inline-block;
+  	font-family: $ff-bebas-b;
+  }
+}
