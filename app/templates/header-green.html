@@ -1,37 +1,42 @@
 <header class="__green">
 	<div class="container">
-	<a href="#" class="header-logo">
-		<img src="images/logo.png" class="header-logo__img">
-	</a>
-	<div class="header-row">
-		<div class="header-lang">
-			<a href="#" class="header-lang__link">РУС</a>
-			<a href="#" class="header-lang__link">қаз</a>
-		</div>
-		<nav class="header-nav">
-			<span class="header-nav__item">
-				<a href="#" class="header-nav__link">
-					Правила Следопыта 
-				</a>
-			</span>
-			<span class="header-nav__item">
-				<a href="prixes.html" class="header-nav__link">
-					 Трофеи  
-				</a>
-			</span>
-			<span class="header-nav__item __dropdown">
-				<span class="header-nav__link" id="loginDropdown">
-					Коллекция следопыта
+		<a href="index.html" class="header-logo">
+			<img src="images/logo.png" class="header-logo__img">
+		</a>
+		<div class="header-row">
+			<div class="header-lang">
+				<a href="#" class="header-lang__link">РУС</a>
+				<a href="#" class="header-lang__link">қаз</a>
+			</div>
+			<nav class="header-nav">
+				<span class="header-nav__item">
+					<a href="index.html#rules" class="header-nav__link">
+						Правила Следопыта 
+					</a>
 				</span>
-				@@include('./templates/dropdown.html')
-			</span>
-			<span class="header-nav__item">
-				<a href="winners.html" class="header-nav__link">
-					<span class="ico icon-paw"></span>
-					Доска почета 
-				</a>
-			</span>
-		</nav>
-	</div>
+				<span class="header-nav__item">
+					<a href="prixes.html" class="header-nav__link">
+						 Трофеи  
+					</a>
+				</span>
+				<span class="header-nav__item __dropdown">
+					<span class="header-nav__link" id="loginDropdown">
+						Коллекция следопыта
+					</span>
+					@@include('./templates/dropdown.html')
+				</span>
+				<span class="header-nav__item">
+					<a href="winners.html" class="header-nav__link">
+						<span class="ico icon-paw"></span>
+						Доска почета 
+					</a>
+				</span>
+			</nav>
+		</div>
+		<button class="mobile-menu-burger js-burger __green">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>		
 	</div>
 </header>

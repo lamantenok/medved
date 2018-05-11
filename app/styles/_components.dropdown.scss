@@ -7,7 +7,7 @@
 	background: $b-white;
 	min-width: 27rem;
 	display: none;
-
+	z-index: 2;
 	&:before{
 		content:'';
 		top:-11px;
@@ -21,6 +21,30 @@
 	}
 	&.__active{
 		display: block;
+	}
+	&.__mobile{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding:2rem 1rem;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    min-width: 100%;
+    .login{
+	    @include mq($until: desktop) {
+		    width: 100%;
+		    height: 100%;
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: center;  	    	
+	    }  	
+    }
+    .dropdown-close{
+    	position: absolute;
+    	top:1rem;
+    	right: 1rem;
+    }
 	}
 }
 

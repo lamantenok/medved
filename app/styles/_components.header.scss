@@ -5,6 +5,7 @@ header{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		position: relative;
 	}
 	&.__green{
 		margin-bottom: 5rem;
@@ -12,13 +13,23 @@ header{
 			color:$b-green;
 		}
 	}
+	@include mq($until: desktop) {
+		margin-bottom: 2rem;
+	}
+	@include mq($until: mobile) {
+		padding-top: 2rem;
+	}	
 }
 
 .header-logo{
 	margin-right: 8rem;
 }
 
-.header-row{}
+.header-row{
+	@include mq($until: desktop) {
+   	display: none;
+  }	
+}
 
 .header-lang{
 	margin-bottom: 1rem;

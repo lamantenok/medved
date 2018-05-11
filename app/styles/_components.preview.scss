@@ -3,7 +3,9 @@
 	background: url('../images/mainbg.jpg') no-repeat center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	overflow: auto;
+	overflow: hidden;
+	@include mq($until: desktop) {
+	}
 }
 
 .preview-row {
@@ -11,13 +13,26 @@
 	align-items: center;
 	background: url('../images/bear.png') no-repeat top right;
 	background-size: contain;
+	@include mq($until: mobile) {
+		background: none;
+	}
 }
 
 .preview-left{
 	width: 35%;
+	@include mq($until: desktop) {
+		display: none;
+	}
 }
 
-.preview-right{}
+.preview-right{
+	@include mq($until: desktop) {
+		width: 70%;
+	}	
+	@include mq($until: tablet) {
+		width: 100%;
+	}	
+}
 
 .preview-image{
 	margin-left: -20%;
@@ -28,6 +43,14 @@
 	color:white;
 	font-size:5.8rem;
 	font-family: $ff-bebas-b;
+	@include mq($until: desktop) {
+		margin-bottom: 0.5rem;
+		font-size:4rem;
+	}
+	@include mq($until: mobile) {
+		font-size:3rem;
+		line-height: 1.2em;
+	}		
 }
 
 .preview-alert{
@@ -39,17 +62,37 @@
   background: linear-gradient(to bottom, rgba(211,15,25,1) 0%,rgba(150,12,18,1) 100%);
   box-shadow: 0px 3px 29px 0px rgba(0, 0, 0, 0.27);
   display: inline-block;
+  @include mq($until: desktop) {
+  	margin-bottom: 5rem;
+  }
+  @include mq($until: mobile) {
+  	margin-bottom: 2rem;
+  	padding: 0.8rem 0;
+  	width: 100%;
+  	text-align: center;
+  	font-size: 1.3rem;
+  }
 }
 
 .preview-reg{
 	position: relative;
 	display: inline-block;
+	@include mq($until: mobile) {
+		display: block;
+	}
 }
 
 .preview-reg__img{
 	top:-3rem;
 	left:105%;
 	position: absolute;
+	@include mq($until: desktop) {
+		bottom:0;
+		left:102%;
+	}
+	@include mq($until: mobile) {
+		display: none;
+	}		
 }
 
 .preview-reg__link{
@@ -60,6 +103,10 @@
 	a{
 		color:$b-white;
 		text-decoration: underline;
+	}
+	@include mq($until: mobile) {
+		margin-bottom: 2rem;
+		font-size: 1.8rem;	
 	}
 }
 
@@ -78,5 +125,15 @@
   	vertical-align: middle;
   	display: inline-block;
   	font-family: $ff-bebas-b;
+  }
+  @include mq($until: mobile) {
+  	padding: 0.8rem 0;
+  	width: 100%;
+  	display: block;
+  	text-align: center;
+  	font-size: 1.2rem;  	
+  	a{
+  		font-size: 1.8rem;
+  	}
   }
 }

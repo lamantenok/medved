@@ -2,6 +2,9 @@
 	padding:2rem 0 1.2rem;
 	.container{
 		display: flex;
+		@include mq($until: desktop) {
+  		flex-direction: column;
+  	}
 	}
 }
 
@@ -14,6 +17,9 @@
 		justify-content: flex-start;
 		align-items: center;
 	}
+	@include mq($until: desktop) {
+		width: 100%;
+	}	
 }
 
 .stepts-bottles-container{
@@ -55,6 +61,9 @@
 			margin-right:0;
 		}
 	}
+	@include mq($until: mobile) {
+		opacity: 1; 
+	}
 }
 
 .stepts-bottles-prev{
@@ -68,6 +77,9 @@
 	&:focus{
 		outline:none;
 	}
+	@include mq($until: desktop) {
+		left:0;
+	}		
 }
 
 .stepts-bottles-next{	
@@ -81,6 +93,9 @@
 	&:focus{
 		outline:none;
 	}
+	@include mq($until: desktop) {
+		right:0;
+	}		
 }
 
 .steps-rules{
@@ -98,6 +113,14 @@
     height: 100%;
 		background: linear-gradient(to bottom, rgba(211,15,25,1) 0%,rgba(150,12,18,1) 100%);
 	}
+	@include mq($until: desktop) {
+		margin-bottom: 2rem;
+		padding: 1.5rem;
+		background: linear-gradient(to bottom, rgba(211,15,25,1) 0%,rgba(150,12,18,1) 100%);
+		&:after{
+			display:none;
+		}
+	}			
 }
 
 .steps-rules__title{
@@ -105,6 +128,9 @@
 	color:white;
 	font-size:2.8rem;
 	font-family: $ff-bebas-b;
+	@include mq($until: mobile) {
+		font-size:2.2rem;
+	}
 }
 
 .steps-rules-list__item{
@@ -142,12 +168,23 @@
 			bottom:auto;
 		}
 	}
+	@include mq($until: mobile) {
+		margin-bottom: 1.5rem;
+		padding-left: 0;
+		font-size:1.3rem;
+		&:before{
+			display:none;
+		}		
+	}
 }
 
 .steps-rules-link{
 	font-size:2.3rem;
 	color:white;
 	text-decoration: underline;
+	@include mq($until: mobile) {
+		font-size:1.5rem;
+	}
 }
 
 .stepts-info{
@@ -155,13 +192,20 @@
 	display: block;
 	color:$b-red;
 	font-size: 1.1rem;
+	line-height: 1.2em;
 	text-align: center;
+	@include mq($until: desktop) {
+		padding: 1.2rem 2rem 0;
+	}
 }
 
 .stepts-prize-container{
 	padding: 3rem 0;
 	max-width: 24rem;
 	position: relative;
+	@include mq($until: mobile) {
+		max-width: 100%;
+	}
 }
 
 .stepts-prize-title{
@@ -175,11 +219,17 @@
 
 .stepts-prize-item{
 	margin-bottom: 1.8rem;
+	@include mq($until: desktop) {
+		margin-bottom: 0;
+	}
 }
 
 .stepts-prize__img{
 	margin:0 auto 1.2rem;
 	height: 15.6rem;
+	@include mq($until: mobile) {
+		height: 12rem;
+	}
 }
 
 .stepts-prize__text{

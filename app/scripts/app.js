@@ -1,4 +1,14 @@
 $(document).ready(function() {
+  $(document).on('click', '.anchor-link', function(event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+      scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+    $('.js-mobile-menu').fadeOut(300);
+    $(document.body).removeClass('_active');
+  });
+  
   $('select').niceSelect();
 
   $('.stepts-bottles').slick({
@@ -6,7 +16,23 @@ $(document).ready(function() {
     slidesToShow: 3,
     slidesToScroll: 1,
     nextArrow:'.stepts-bottles-next',
-    prevArrow:'.stepts-bottles-prev'
+    prevArrow:'.stepts-bottles-prev',
+    responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    }    
+  ]
   });
   
   $('.stepts-prize').slick({
@@ -15,7 +41,16 @@ $(document).ready(function() {
     vertical:true,
     verticalSwiping:true,
     nextArrow:'.stepts-bottles-top',
-    prevArrow:'.stepts-bottles-bottom'
+    prevArrow:'.stepts-bottles-bottom',
+    responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    }
+  ]    
   });
 
   $('#loginPhone').mask('+7 (000) 000-000-0');
@@ -26,8 +61,17 @@ $(document).ready(function() {
     $('#dropdown').toggleClass('__active');
   });
 
-  // $('.js-modal-container').addClass('_active')
-  // $(document.body).addClass('_active');
+  $('#loginDropdownMobile').click(function() {
+    $('#dropdownMobile').toggleClass('__active');
+  });
+
+  $('.js-dropdown-close').click(function() {
+    $('#dropdownMobile').removeClass('__active');
+  });  
+
+  $('.js-modal-container').addClass('_active')
+  $(document.body).addClass('_active');
+  
   $('.js-ok').click(function($event) {
     $event.preventDefault();
    $('.js-modal-container').fadeOut(300);
@@ -59,17 +103,13 @@ $(document).ready(function() {
   });
 
   $('.js-burger').click(function() {
-    $('.js-mobile-menu').fadeIn(500);
+    $('.js-mobile-menu').fadeIn(300);
     $(document.body).addClass('_active');
-    window.setTimeout(function() {
-      $('.js-burger-close').addClass('is-active');
-    }, 500);
   });
 
   $('.js-burger-close').click(function() {
     $('.js-mobile-menu').fadeOut(300);
     $(document.body).removeClass('_active');
-    $('.js-burger-close').removeClass('is-active');
   });
 
   $(document).mousedown(function(e) {

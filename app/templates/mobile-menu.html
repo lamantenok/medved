@@ -1,3 +1,60 @@
 <nav class="mobile-menu js-mobile-menu">
-
+	<div class="mobile-menu-inner">
+		<a href="index.html" class="mobile-menu-logo">
+			<img src="images/logo.png" class="mobile-menu-logo__img">
+		</a>
+		<div class="mobile-menu-lang">
+			<a href="#" class="mobile-menu-lang__link">РУС</a>
+			<a href="#" class="mobile-menu-lang__link">қаз</a>
+		</div>
+		<div class="mobile-menu-nav">
+			<span class="mobile-menu__item">
+				<a href="#rules" class="mobile-menu__link anchor-link">
+					Правила Следопыта 
+				</a>
+			</span>
+			<span class="mobile-menu__item">
+				<a href="prizes.html" class="mobile-menu__link">
+					 Трофеи  
+				</a>
+			</span>
+			<span class="mobile-menu__item __dropdown">
+				<span class="mobile-menu__link" id="loginDropdownMobile">
+					Коллекция следопыта
+				</span>
+				<div class="dropdown __mobile" id="dropdownMobile">
+					<form class="login">
+						<div class="login-row">
+							<label class="login-label" for="loginPhone">Номер Телефона</label>
+							<input class="login-phone" id="loginPhone" placeholder="+7|">
+						</div>
+						<div class="login-row">
+							<label class="login-label" for="loginPass">Пароль</label>
+							<div class="login-pass-container ">
+								<input type="password" class="login-pass __invalid" id="loginPass">
+								<span class="login-pass__text">неверный пароль.<a href="#" class="login-pass__text-link">Забыл пароль?</a></span>
+							</div>
+						</div>
+						<div class="login-control">
+							<div class="login-control-row">
+								<button class="login-reg js-reg-btn">Регистрация</button>
+								<button class="login-btn">Войти</button>				
+							</div>
+							<div class="login-link-row">
+								<a href="#" class="login-link">Забыл пароль?</a>
+							</div>
+						</div>
+					</form>
+					<button class="ico icons-close dropdown-close js-dropdown-close"></button>
+				</div>
+			</span>
+			<span class="mobile-menu__item">
+				<a href="winners.html" class="mobile-menu__link">
+					<span class="ico icon-paw"></span>
+					Доска почета 
+				</a>
+			</span>
+		</div>		
+	</div>
+	<button class="ico icons-close mobile-menu-close js-burger-close"></button>
 </nav>

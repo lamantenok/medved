@@ -35,6 +35,7 @@
   color:$b-white;
   cursor: pointer;
   font-size: 1rem;
+  line-height: 1.2em;
   text-decoration: underline;
   user-select: none;
   &:hover{
@@ -89,6 +90,12 @@
   margin-bottom: 8rem;
   display: flex;
   justify-content: center;
+  @include mq($until: desktop) {
+   margin-bottom: 3rem; 
+  }
+  @include mq($until: mobile) {
+    margin-bottom: 3rem;
+  }
 }
 
 .modal-lang__item{
@@ -105,6 +112,14 @@
   color:$b-white;
   font-size:6.5rem; 
   text-align: center;
+ @include mq($until: desktop) {
+    margin-bottom: 2rem;
+    font-size:3.5rem;
+  }  
+  @include mq($until: mobile) {
+    margin-bottom: 2rem;
+    font-size:3.5rem;
+  }
 }
 
 .modal-control{
@@ -127,6 +142,16 @@
   &:hover{
     background: linear-gradient(to top, rgba(104,8,8,1) 0%,rgba(165,13,23,1) 100%);
   }
+  @include mq($until: desktop) {
+    width: 40%; 
+    padding:1rem 0;
+    font-size:2rem;    
+  }
+  @include mq($until: mobile) {
+    width: 40%; 
+    padding:1rem 0;
+    font-size:2rem;
+  }
 }
 
 .modal-error{
@@ -141,6 +166,12 @@
   align-items: center;
   justify-content: center;
   display: none;
+  @include mq($until: desktop) {
+     padding: 2rem; 
+  }  
+  @include mq($until: mobile) {
+   padding: 2rem; 
+  }
 }
 
 .modal-error-inner{
@@ -160,6 +191,14 @@
   text-align: center;
   .__red{
     color:$b-red;
+  }
+  @include mq($until: desktop) {
+    margin-bottom: 2rem;
+    font-size:2rem; 
+  }
+  @include mq($until: mobile) {
+    margin-bottom: 2rem;
+    font-size:2rem;
   }
 }
 

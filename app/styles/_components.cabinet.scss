@@ -8,6 +8,17 @@
 	color:$b-red;
 	text-align: center;
 	font-size:3rem;
+	@include mq($until: desktop) {
+		margin-bottom: 2.5rem;
+		font-size:2.5rem;
+	}
+	@include mq($until: mobile) {
+		margin-bottom: 2rem;
+		font-size:2rem;
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+	}	
 }
 
 .cabinet-login{
@@ -16,12 +27,24 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	@include mq($until: desktop) {
+		margin:0 auto 2rem;
+	}
+	@include mq($until: mobile) {
+		margin:0 auto 2rem;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}	
 }
 
 
 .cabinet-login__row{
 	position: relative;	
 	width: 45%;
+	@include mq($until: mobile) {
+		width: 100%;
+	}
 }
 
 .cabinet-login__input{
@@ -29,6 +52,9 @@
 	width: 100%;
 	border:0;
 	border-bottom:2px solid $b-green;
+	@include mq($until: mobile) {
+		margin-bottom: 1rem;
+	}		
 }
 
 .cabinet-login__text{
@@ -53,7 +79,15 @@
   cursor: pointer;
   &:hover{
     background: linear-gradient(to top, rgba(104,8,8,1) 0%,rgba(165,13,23,1) 100%);
-  }	
+  }
+	@include mq($until: desktop) {
+		padding:1rem 2rem;
+		font-size:1.5rem;
+	}  
+	@include mq($until: mobile) {
+		width: 100%;
+		max-width: 100%;
+	}		
 }
 
 .cabinet-subtitle{
@@ -66,6 +100,20 @@
 		margin-bottom: -0.5rem;
 		margin-right: 1.8rem;
 	}
+	@include mq($until: desktop) {
+		font-size:2.5rem;
+		.ico{
+			margin-right: 1.5rem;	
+		}
+	}  
+	@include mq($until: mobile) {
+		margin-bottom: 1.5rem;
+		font-size:2rem;
+		.ico{
+			width: 67px;
+    	height: 85px;
+		}
+	}		
 }
 
 .cabinet-count{
@@ -75,6 +123,13 @@
 	font-family: $ff-bebas-b;
 	color:$b-red;
 	text-align: center;	
+	@include mq($until: desktop) {
+		margin-bottom: 2rem;
+		font-size:4rem;
+	}  
+	@include mq($until: mobile) {
+		font-size:3rem;
+	}		
 }
 
 .cabinet-collection{
@@ -113,10 +168,29 @@
 	    background-color: $b-green;
 	  }  	
   }
+	@include mq($until: desktop) {
+		font-size:2.5rem;
+	}  
+	@include mq($until: mobile) {
+		font-size:2rem;
+	  span{
+		  &:before{
+		    display:none;
+		  }
+		  &:after{
+		    display:none;
+		  }  	
+	  }		
+	}	  
 }
 
 .cabinet-table{
 	margin-bottom: 3rem;
+	@include mq($until: desktop) {
+		margin-bottom: 2rem;
+	}  
+	@include mq($until: mobile) {
+	}	
 }
 
 .cabinet-row{
@@ -129,6 +203,16 @@
 	&:last-of-type{
 		margin-bottom:0;
 	}
+	@include mq($until: desktop) {
+		padding: 0 2rem 1.2rem;
+	}  
+	@include mq($until: mobile) {
+		padding: 0 3rem 0.5rem;
+		margin-bottom: 1rem;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}		
 }
 
 .cabinet-col{
@@ -140,6 +224,17 @@
 	&:nth-of-type(4){
 		width: 15%;
 	}
+	@include mq($until: mobile) {
+		margin-bottom: 0.5rem;
+		width: 100%;
+		text-align: center;
+		&:nth-of-type(1){
+			width: 100%;
+		}
+		&:nth-of-type(4){
+			width: 100%;
+		}
+	}		
 }
 
 .cabinet-label{
@@ -166,6 +261,12 @@
 		color:$b-red;
 		font-family: $ff-bebas-b;
 	}
+	@include mq($until: desktop) {
+		font-size: 2.5rem;
+	}  
+	@include mq($until: mobile) {
+		font-size: 2rem;
+	}		
 }
 
 .cabinet-action{
@@ -174,10 +275,17 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	@include mq($until: mobile) {
+		margin:1rem auto;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}	
 }
 
 .cabinet-action__btn{
 	width: 22rem;	
+	max-width: 45%;
   padding:1.5rem 0;
   font-size:1.8rem;
   font-family: $ff-bebas-b;
@@ -191,4 +299,12 @@
   &:hover{
     background: linear-gradient(to top, rgba(104,8,8,1) 0%,rgba(165,13,23,1) 100%);
   }	
+	@include mq($until: desktop) {
+		width: 17rem;	
+		font-size:1.5rem;
+	}  
+	@include mq($until: mobile) {
+		margin-bottom: 1.5rem;
+		width: 100%;
+	}  
 }

@@ -7,6 +7,9 @@
   background: transparent;
   z-index: 1000;
   display: none;
+  @include mq($until: desktop) {
+  	overflow-y: auto;
+  }
 }
 
 .registration-inner{
@@ -15,15 +18,26 @@
 	justify-content: center;
 	width: 100%;
 	height: 100%;
+	@include mq($until: desktop) {
+		background: $b-white;
+		position: relative;
+		height: auto;
+	}
 }
 
 .registration-form{
 	padding: 2rem 6rem;
-	background:white;
+	background:$b-white;
   width: 72rem;
   max-height: 98%;
   max-width: 90%;
   position: relative;	
+  @include mq($until: desktop) {
+  	position: initial;
+  	width: 90%;
+  	max-height: none;
+  	padding: 2rem 0;
+  }
 }
 
 .registration-title{
@@ -33,12 +47,20 @@
 	text-align: center;
 	font-size:3rem;
 	font-family: $ff-bebas-b;
+	@include mq($until: mobile) {
+		font-size:2rem;
+	}
 }
 
 .registration-row{
 	margin-bottom: 2rem;
 	display: flex;
 	justify-content: space-between;
+	@include mq($until: mobile) {
+		margin-bottom: 0;
+		flex-direction: column;
+		justify-content: center;
+	}
 }
 
 .registration-col{
@@ -46,6 +68,10 @@
 	&.__check{
 		display: flex;
 		align-items: flex-end;
+	}
+	@include mq($until: mobile) {
+		margin-bottom: 1rem;
+		width: 100%;
 	}
 }
 
@@ -55,6 +81,9 @@
 	text-transform: uppercase;
 	font-size:1.8rem;
 	color:$b-green;	
+	@include mq($until: mobile) {
+		font-size:1.5rem;
+	}
 }
 
 .registration-input{
@@ -176,6 +205,12 @@
   cursor: pointer;
   &:hover{
     background: linear-gradient(to top, rgba(104,8,8,1) 0%,rgba(165,13,23,1) 100%);
+  }
+  @include mq($until: mobile) {
+  	max-width: 100%;
+  	width: 100%;
+  	padding:1rem 0;
+  	font-size:2rem;
   }
 }
 

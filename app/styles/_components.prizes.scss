@@ -1,6 +1,15 @@
 .prizes-row{
 	margin-bottom: 4rem;
 	display: flex;
+	@include mq($until: desktop) {
+		margin-bottom: 2rem;
+		justify-content: space-between;
+	}
+	@include mq($until: mobile) {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 }
 
 .prizes-col{
@@ -8,6 +17,12 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	@include mq($until: desktop) {
+		width: 45%;
+	}
+	@include mq($until: mobile) {
+		width: 100%;
+	}
 }
 
 .prizes-title{
@@ -15,14 +30,22 @@
 	text-transform: uppercase;
 	font-size:2.9rem;
 	color:$b-red;
+	@include mq($until: desktop) {
+		margin-bottom: 2rem;
+		font-size:2rem;
+	}
 }
 
 .prizes-img{
 	height: 21rem;
+	@include mq($until: desktop) {
+		height: 15rem;
+	}		
 }
 
 .prizes-img__item{
 	max-height: 100%;
+	max-width: 100%;
 }
 
 .prizes-desc{
@@ -32,6 +55,9 @@
 	color:$b-red;	
 	text-align: center;
 	line-height: 1.2;
+	@include mq($until: desktop) {
+		font-size:1.5rem;
+	}	
 }
 
 .prizes-desc-small{
